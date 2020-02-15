@@ -103,7 +103,7 @@ button:focus {
 
 .parallax {
     /* The image used */
-    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url('images/profile3.gif');
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url('images/profile-resize.png');
     /* Full height */
     height: 95vh;
     /* Create the parallax scrolling effect */
@@ -176,4 +176,13 @@ h2 {
     /* fixed header height*/
     margin: -60px 0 0;
     /* negative fixed header height */
+}
+
+a.contact {
+    text-decoration: underline;
+    color: black;
+}
+
+i {
+    color: #6B5B95;
 }
