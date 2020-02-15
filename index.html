@@ -18,7 +18,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-    <title>Document</title>
+    <script src="script.js" type="text/javascript" async></script>
+    <title>Patcharaphorn L.</title>
 </head>
 
 <body>
@@ -193,27 +194,5 @@
         https://codepen.io/designcouch/pen/Atyop
     </div>
 </body>
-<script>
-    $(document).ready(function () {
-        $('#navbar-toggler').click(function () {
-            $('#nav-icon').toggleClass('open');
-        });
-    });
-
-    var nystories = document.getElementById('education').offsetTop;
-    window.onscroll = function () {
-        if (window.pageYOffset > 0) {
-            var opac = (window.pageYOffset / nystories);
-            document.getElementById('background').style.backgroundImage = "linear-gradient(rgba(255, 255, 255, " + opac + "), rgba(255, 255, 255, " + opac + ")), url('images/profile3.png')";
-        }
-    }
-
-    $('.navbar-nav>li>a').on('click', function () {
-        $('.navbar-collapse').collapse('hide');
-        $('#nav-icon').toggleClass('open');
-    });
-
-
-</script>
 
 </html>
