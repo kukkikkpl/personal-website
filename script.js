@@ -8,7 +8,7 @@ var nystories = document.getElementById('education').offsetTop;
 window.onscroll = function () {
     if (window.pageYOffset > 0) {
         var opac = (window.pageYOffset / nystories);
-        document.getElementById('background').style.backgroundImage = "linear-gradient(rgba(255, 255, 255, " + opac + "), rgba(255, 255, 255, " + opac + ")), url('images/profile3.png')";
+        document.getElementById('background').style.backgroundImage = "linear-gradient(rgba(255, 255, 255, " + opac + "), rgba(255, 255, 255, " + opac + ")), url('images/profile3.jpg')";
     }
 }
 
