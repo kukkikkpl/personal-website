@@ -8,8 +8,7 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Alatsi&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Mada|Tauri&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Fjalla+One|Noto+Sans|VT323&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kanit:100&display=swap&text=%7D" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
@@ -62,24 +61,41 @@
 
     <div id="background" class="parallax">
         <div class="status-box">
-            <div class="status name" style="font-family: 'VT323', monspace;">PATCHARAPHORN</div>
-            <div class="status name" style="font-family: 'VT323', monspace;">LERTVIRUL</div>
+            <div class="status name">PATCHARAPHORN</div>
+            <div class="status name">LERTVIRUL</div>
             <div class="status position">DEVELOPER.</div>
+            <div class="status" id="scrollBtn">abc</div>
         </div>
     </div>
 
     <div class="content">
-        <div class="container section hide">
-            <span id="bio"></span>
-            <div class="row">
-                <div class="col-sm-4">
-                    <h2>Bio</h2>
-                </div>
-                <div class="col-sm-8">
-                    <h4>abc</h4>
+        <div id="panel1" class="hide"
+            style="text-align: center; height: 100vh; display: flex; align-items: center; justify-content: center">
+            <div>
+                <div style="text-align: center;">
+                    <div style="display: inline-block; height: 136px;">
+                        <div style="display: inline-block; font-style: italic;">
+                            <h2>Fast learner</h2>
+                            <h2>Curiosity</h2>
+                            <h2>Patient</h2>
+                            <h2>Adaptable</h2>
+                        </div>
+                        <div id="bracket">}</div>
+                    </div>
+                    <div
+                        style="display: inline-block; vertical-align: top; height: 136px; line-height: 136px; text-align: left;">
+                        <h2
+                            style="vertical-align: middle; display: inline-block; line-height: normal; margin-bottom: 0; height: inherit;">
+                            are<br>
+                            descriptions<br>
+                            of<br>
+                            me <i class="far fa-smile" style="color: black; font-size: 20px;"></i></h2>
+                    </div>
                 </div>
             </div>
+
         </div>
+        <div id="panel2" style="margin-bottom: 10vh;"></div>
 
         <div class="container section hide">
             <span id="skill"></span>
@@ -264,7 +280,7 @@
         </div>
     </div>
     <div id="footer">
-        
+
     </div>
 </body>
 
