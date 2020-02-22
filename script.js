@@ -4,6 +4,7 @@ $(document).ready(function () {
     });
     var topPosition = $(window).height()
     var divs = $('.hide');
+    var personality = $('#personality');
     window.onscroll = function () {
         /*
         if (window.pageYOffset > 0) {
@@ -15,8 +16,10 @@ $(document).ready(function () {
             if ($(item).offset().top <= $(window).scrollTop() + $(window).height()) {
                 $(item).animate({ opacity: 1 }, 400);
             }
-
         });
+        if (personality.offset().top <= $(window).scrollTop() + $(window).height()) {
+            personality.css("animation", "fadein-bottom 1s");
+        }
     }
     $('.navbar-nav>li>a').on('click', function (e) {
         e.preventDefault();
@@ -29,25 +32,33 @@ $(document).ready(function () {
         $('#nav-icon').removeClass('open');
     });
 
+    $("#scrollBtn1").click(function () {
+        //e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $('#panel1').offset().top
+        }, 400);
+
+    });
+
+    $("#scrollBtn2").click(function () {
+        //e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $('#panel2').offset().top
+        }, 400);
+
+    });
+
 
 });
 
-$("#scrollBtn").click(function () {
-    e.preventDefault();
-    $('html, body').animate({
-        scrollTop: $('#panel1').offset().top
-    }, 400);
-});
 
-
-function scrollThere(targetElement, e) {
-    e.preventDefault();
+function scrollThere(targetElement) {
     $('html, body').animate(
         { scrollTop: targetElement.offset().top }, 400
     );
 }
 
-window.addEventListener('wheel', mouseWheelEvent, { passive: false });
+window.addEventListener('wheel', mouseWheelEvent);
 
 function mouseWheelEvent(e) {
     var background = $('#background').offset().top;
@@ -64,15 +75,17 @@ function mouseWheelEvent(e) {
     } else {
         scrollDirection = 'up';
     }
+    //console.log(background, panel1, panel2);
+    //console.log(lastScrollTop);
     if (lastScrollTop === background) {
-        targetUp = $('#background');
+        targetUp = 'undefined';
         targetDown = $('#panel1');
     } else if (lastScrollTop === panel1) {
         targetUp = $('#background');
         targetDown = $('#panel2');
     } else if (lastScrollTop === panel2) {
         targetUp = $('#panel1');
-        targetDown = $('#panel2');
+        targetDown = 'undefined';
     } else if (lastScrollTop < panel1) {
         targetUp = $('#background');
         targetDown = $('#panel2');
@@ -87,9 +100,13 @@ function mouseWheelEvent(e) {
         targetElement = targetUp;
     }
 
-    if (typeof targetElement !== 'undefined') {
-        scrollThere(targetElement, e);
+    //console.log(targetElement, typeof targetElement);
+    if (typeof targetElement !== 'undefined' && targetElement !== 'undefined') {
+        //console.log('scroll!')
+        scrollThere(targetElement);
     }
+
+
 
 
 }
