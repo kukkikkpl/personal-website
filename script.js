@@ -19,6 +19,7 @@ $(document).ready(function () {
         });
         if (personality.offset().top <= $(window).scrollTop() + $(window).height()) {
             personality.css("animation", "fadein-bottom 1s");
+            personality.css("opacity", 1)
         }
     }
     $('.navbar-nav>li>a').on('click', function (e) {
@@ -34,7 +35,7 @@ $(document).ready(function () {
 
     $("#scrollBtn1").click(function () {
         //e.preventDefault();
-        $('html, body').animate({
+        $('html, body').stop().animate({
             scrollTop: $('#panel1').offset().top
         }, 400);
 
@@ -42,7 +43,7 @@ $(document).ready(function () {
 
     $("#scrollBtn2").click(function () {
         //e.preventDefault();
-        $('html, body').animate({
+        $('html, body').stop().animate({
             scrollTop: $('#panel2').offset().top
         }, 400);
 
@@ -53,9 +54,13 @@ $(document).ready(function () {
 
 
 function scrollThere(targetElement) {
-    $('html, body').animate(
+    $('html, body').stop().animate(
         { scrollTop: targetElement.offset().top }, 400
     );
+}
+
+function changeColor(item, targetColor) {
+    $(item).find('.fa-circle').css('color', targetColor);
 }
 
 window.addEventListener('wheel', mouseWheelEvent);

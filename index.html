@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Alatsi&display=swap" rel="stylesheet">
@@ -30,7 +31,7 @@
 
 <body>
 
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" id="top-nav">
+    <nav class="navbar fixed-top navbar-expand-lg" id="top-nav">
         <a class="navbar-brand d-none d-sm-block" href="javascript:void(0)" id="brand">PATCHARAPHORN LERTVIRUL</a>
         <a class="navbar-brand d-sm-none" href="javascript:void(0)" id="brand">PATCHARAPHORN L.</a>
         <button id="navbar-toggler" class="navbar-toggler menu-btn" type="button" data-toggle="collapse"
@@ -58,6 +59,9 @@
                     <a class="nav-link" href="#award">Award</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="#interest">Interests</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#contact">Contact</a>
                 </li>
             </ul>
@@ -71,7 +75,7 @@
             <div class="status position">DEVELOPER.</div>
         </div>
     </div>
-    <div style="top: 88vh; position: absolute; width: 100%; text-align: center;">
+    <div class="hide-on-landscape" style="top: 88vh; position: absolute; width: 100%; text-align: center;">
         <span style="display: block; color: white;">scroll</span>
         <i id="scrollBtn1" class="fas fa-chevron-down scroll-icon"
             style="display: inline-block; font-size: xx-large; color: white;"></i></div>
@@ -82,10 +86,10 @@
                 <div style="text-align: center;">
                     <div style="display: inline-block; height: 136px;">
                         <div style="display: inline-block; font-style: italic;">
-                            <h2>Fast learner</h2>
-                            <h2>Curiosity</h2>
-                            <h2>Patient</h2>
-                            <h2>Adaptable</h2>
+                            <h2 class="each-personality">Fast learner</h2>
+                            <h2 class="each-personality">Curiosity</h2>
+                            <h2 class="each-personality">Patient</h2>
+                            <h2 class="each-personality">Adaptable</h2>
                         </div>
                         <div id="bracket">}</div>
                     </div>
@@ -96,10 +100,10 @@
                             are<br>
                             descriptions<br>
                             of<br>
-                            me <i class="far fa-smile" style="color: black; font-size: 20px;"></i></h2>
+                            myself <i class="far fa-smile" style="color: black; font-size: 20px;"></i></h2>
                     </div>
                 </div>
-                <div style="top: 33vh; position: relative; width: 100%; text-align: center;">
+                <div class="hide-on-landscape" style="top: 33vh; position: relative; width: 100%; text-align: center;">
                     <span style="display: block; color: white;">scroll</span>
                     <i id="scrollBtn2" class="fas fa-chevron-down scroll-icon"
                         style="display: inline-block; font-size: xx-large; color: white;"></i></div>
@@ -137,6 +141,8 @@
                         <li>Agile</li>
                         <li>Object-oriented programming</li>
                         <li>Kanban</li>
+                        <li>RESTful</li>
+                        <li>Microservices</li>
                     </ul>
                 </div>
                 <div class="col-sm">
@@ -164,12 +170,14 @@
                                 <ul>
                                     <li>
                                         Gathered requirements from staffs, designed and developed a new process with
-                                        PL/SQL, ASP.NET.
+                                        PL/SQL, ASP.NET which can cut down repeated work and enhance both quality and
+                                        quantity of the task.
                                     </li>
                                     <li>
                                         Completed Cooperative Education Program project named "The Development of API
                                         and Deep Learning Model for Face Verification" using Python (Flask, OpenCV,
-                                        NumPy, MXNet).
+                                        NumPy, MXNet) to develop APIs and models which can be applied to the
+                                        verification process.
                                     </li>
                                 </ul>
                             </div>
@@ -179,7 +187,7 @@
                             <div class="timeline-content">
                                 <h4 class="emphasize">Teacher Assistant (Database System Concepts)</h4>
                                 <h4>Faculty of Information Technology</h4>
-                                <h4>King Mongkut's Institute of Technlogy Ladkrabang</h4>
+                                <h4>King Mongkut's Institute of Technology Ladkrabang</h4>
                                 <ul>
                                     <li>
                                         Assisted teachers in Database System Concepts (Conceptual Database Design,
@@ -235,13 +243,41 @@
                         <li>
                             <h4 class="timeline-date">2016 - present</h4>
                             <div class="timeline-content">
-                                <h4 class="emphasize">Received a full-tuition scholarship</h4>
-                                <h4>from Faculty of Information Technology</h4>
+                                <h4 class="emphasize">Won a full-tuition scholarship</h4>
+                                <h4>to Faculty of Information Technology</h4>
                                 <h4>King Mongkut's Institute of Technlogy Ladkrabang</h4>
                             </div>
                         </li>
                     </ul>
 
+                </div>
+            </div>
+        </div>
+
+        <div class="container section hide">
+            <span id="interest"></span>
+            <div class="row">
+                <div class="col-sm-4">
+                    <h2>Interests</h2>
+                </div>
+                <div class="col-sm-8">
+                    <ul class="fa-ul" style="margin-left: 2em;">
+                        <li><span class="fa-li"><i class="fas fa-code"></i></span>
+                            <h4>Coding and Artificial Intelligence</h4>
+                        </li>
+                        <li><span class="fa-li"><i class="fas fa-gamepad"></i></span>
+                            <h4>Games (especially puzzle games!)</h4>
+                        </li>
+                        <li><span class="fa-li"><i class="fas fa-hamburger"></i></span>
+                            <h4>Cooking</h4>
+                        </li>
+                        <li><span class="fa-li"><i class="fas fa-headphones-alt"></i></span>
+                            <h4>Music (mostly T-pop)</h4>
+                        </li>
+                        <li><span class="fa-li"><i class="fas fa-camera"></i></span>
+                            <h4>Photography</h4>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -290,9 +326,34 @@
             </div>
         </div>
     </div>
-    <!--div id="footer">
-        
-    </div-->
+    <div id="footer">
+        <h4>If you are interested or have any question,</h4>
+        <h4>please do not hesitate to contact me!</h4>
+        <div style="margin:25px;">
+
+            <span class="fa-stack" onmouseover="changeColor(this, '#8373aa')" onmouseout="changeColor(this, '#6B5B95')">
+                <a href="mailto:patcharaphorn.lertvirul@gmail.com" target="_blank">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i style="color: white;" class="fas fa-envelope fa-stack-1x"></i>
+                </a>
+            </span>
+
+            <span class="fa-stack" onmouseover="changeColor(this, '#8373aa')" onmouseout="changeColor(this, '#6B5B95')">
+                <a href="tel:+6685-551-1179" target="_blank">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i style="color: white;" class="fas fa-phone fa-stack-1x"></i>
+                </a>
+            </span>
+
+            <span class="fa-stack" onmouseover="changeColor(this, '#8373aa')" onmouseout="changeColor(this, '#6B5B95')">
+                <a href="https://www.github.com/kukkikkpl/" target="_blank">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i style="color: white;" class="fab fa-linkedin-in fa-stack-1x"></i>
+                </a>
+            </span>
+            </a>
+        </div>
+    </div>
 </body>
 
 </html>
